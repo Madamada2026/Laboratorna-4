@@ -1,23 +1,30 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import EmployeeDirectory from './components/EmployeeDirectory';
+import { initialEmployees } from './mockData';
 import './App.css';
 
 function App() {
+  const [employees] = useState(initialEmployees);
+  const [showDetails, setShowDetails] = useState(true);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div className="app-container">
+      <header className="app-header">
+        
+        <button 
+          className="toggle-btn"
+          onClick={() => setShowDetails(!showDetails)}
         >
-          Learn React
-        </a>
+          {showDetails ? 'Сховати контакти' : 'Показати контакти'}
+        </button>
       </header>
+
+      <main className="app-main">
+        <EmployeeDirectory 
+          employees={employees} 
+          showDetails={showDetails} 
+        />
+      </main>
     </div>
   );
 }

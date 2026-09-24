@@ -499,3 +499,134 @@
   opacity: 0.5;
   cursor: not-allowed;
 }
+/* Стилі для Завдання 5: Система коментарів */
+.comments-system-container {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+}
+
+.comments-title {
+  margin-top: 0;
+  color: #212529;
+}
+
+.main-comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 25px;
+  background: #f8f9fa;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.comment-input, .comment-textarea {
+  padding: 10px 12px;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+.comment-textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.submit-btn {
+  align-self: flex-start;
+  padding: 8px 16px;
+  border: none;
+  background: #228be6;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.submit-btn:hover {
+  background: #1c7ed6;
+}
+
+.comments-sort-panel {
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.comment-item {
+  padding: 14px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  background: #fff;
+  border: 1px solid #e9ecef;
+}
+
+/* Візуальне розрізнення рівнів вкладеності */
+.comment-item.level-1 {
+  border-left: 4px solid #228be6;
+}
+
+.comment-item.level-2 {
+  border-left: 4px solid #40c057;
+  margin-left: 20px;
+  background: #f9fbf9;
+}
+
+.comment-item.level-3 {
+  border-left: 4px solid #fab005;
+  margin-left: 20px;
+  background: #fffdf5;
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.comment-author {
+  font-weight: bold;
+  color: #343a40;
+}
+
+.comment-date {
+  font-size: 0.8rem;
+  color: #868e96;
+}
+
+.comment-text {
+  margin: 0 0 10px 0;
+  color: #495057;
+  line-height: 1.4;
+}
+
+.comment-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.vote-btn, .reply-btn {
+  background: none;
+  border: 1px solid #dee2e6;
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.vote-btn:hover, .reply-btn:hover {
+  background: #e9ecef;
+}
+
+.reply-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px dashed #dee2e6;
+}

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import EmployeeDirectory from './components/EmployeeDirectory';
 import Dashboard from './components/Dashboard';
 import ProductCatalog from './components/ProductCatalog';
+import CommentSystem from './components/CommentSystem';
 import { initialEmployees, initialProducts } from './mockData';
 import './App.css';
 
@@ -11,7 +12,6 @@ function App() {
   const [showDetails, setShowDetails] = useState(true);
   const [interactionCount, setInteractionCount] = useState(0);
 
-  // Стан для Завдання 4 (Фільтри, сортування, пошук, режим)
   const [category, setCategory] = useState('Всі');
   const [search, setSearch] = useState('');
   const [sort, setSort] = useState('name-asc');
@@ -48,7 +48,12 @@ function App() {
       </header>
 
       <main className="app-main">
-        {/* Завдання 4: Панель керування фільтрами та каталог */}
+        {/* Завдання 5: Система коментарів */}
+        <CommentSystem />
+
+        <hr className="section-divider" />
+
+        {/* Завдання 4: Каталог товарів */}
         <section className="catalog-section">
           <div className="controls-panel">
             <input 
@@ -119,4 +124,5 @@ function App() {
 }
 
 export default App;
+
 

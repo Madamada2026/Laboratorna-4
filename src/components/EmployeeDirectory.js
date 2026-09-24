@@ -2,7 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import EmployeeCard from './EmployeeCard';
 
-function EmployeeDirectory({ employees, showDetails }) {
+function EmployeeDirectory({ 
+  employees, 
+  showDetails, 
+  onEmailClick, 
+  onPhoneClick, 
+  onViewProfile 
+}) {
   if (!employees || employees.length === 0) {
     return <div className="empty-directory">Співробітників не знайдено.</div>;
   }
@@ -16,6 +22,9 @@ function EmployeeDirectory({ employees, showDetails }) {
             key={emp.id} 
             employee={emp} 
             showDetails={showDetails} 
+            onEmailClick={onEmailClick}
+            onPhoneClick={onPhoneClick}
+            onViewProfile={onViewProfile}
           />
         ))}
       </div>
@@ -25,7 +34,10 @@ function EmployeeDirectory({ employees, showDetails }) {
 
 EmployeeDirectory.propTypes = {
   employees: PropTypes.arrayOf(PropTypes.object).isRequired,
-  showDetails: PropTypes.bool
+  showDetails: PropTypes.bool,
+  onEmailClick: PropTypes.func.isRequired,
+  onPhoneClick: PropTypes.func.isRequired,
+  onViewProfile: PropTypes.func.isRequired
 };
 
 export default EmployeeDirectory;

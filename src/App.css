@@ -205,3 +205,132 @@
 .profile-btn:hover {
   background-color: #eebefa;
 }
+/* Стилі для Завдання 3 */
+.dashboard-container {
+  margin-bottom: 30px;
+}
+
+.dashboard-title {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.dashboard-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.section-divider {
+  margin: 30px 0;
+  border: 0;
+  border-top: 1px dashed #ccc;
+}
+
+/* Базові стилі Card */
+.custom-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px;
+  background-color: #ffffff;
+  transition: all 0.2s ease-in-out;
+  flex: 1;
+  min-width: 250px;
+}
+
+/* Налаштування розмірів (size) */
+.card-size-small {
+  padding: 12px;
+  font-size: 0.85rem;
+}
+
+.card-size-medium {
+  padding: 18px;
+  font-size: 0.95rem;
+}
+
+.card-size-large {
+  padding: 24px;
+  font-size: 1.1rem;
+}
+
+/* Тінь та рамка */
+.card-shadow {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card-border {
+  border: 1px solid #e2e8f0;
+}
+
+/* Варіанти кольорів (variant) */
+.card-variant-primary {
+  border-top: 5px solid #228be6;
+}
+
+.card-variant-secondary {
+  border-top: 5px solid #868e96;
+}
+
+.card-variant-success {
+  border-top: 5px solid #40c057;
+}
+
+.card-variant-warning {
+  border-top: 5px solid #fab005;
+}
+
+/* Внутрішня структура картки */
+.card-header-block {
+  border-bottom: 1px solid #f1f3f5;
+  padding-bottom: 8px;
+  margin-bottom: 10px;
+}
+
+.card-header-block h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.card-body-block {
+  flex-grow: 1;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #228be6;
+  margin: 5px 0;
+}
+
+.card-footer-block {
+  border-top: 1px solid #f1f3f5;
+  padding-top: 10px;
+  margin-top: 12px;
+}
+
+.status-tag {
+  background-color: #d3f9d8;
+  color: #2b8a3e;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.like-btn {
+  background-color: #fff3bf;
+  color: #f08c00;
+  border: 1px solid #ffe066;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.like-btn:hover {
+  background-color: #ffec99;
+}

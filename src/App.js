@@ -1,40 +1,35 @@
 import React, { useState } from 'react';
 import EmployeeDirectory from './components/EmployeeDirectory';
+import Dashboard from './components/Dashboard';
 import { initialEmployees } from './mockData';
 import './App.css';
 
 function App() {
   const [employees] = useState(initialEmployees);
   const [showDetails, setShowDetails] = useState(true);
-  
-  // Стан для лічильника взаємодій (Завдання 2)
   const [interactionCount, setInteractionCount] = useState(0);
 
-  // Впомогальна функція для збільшення лічильника
   const incrementCounter = () => {
     setInteractionCount(prev => prev + 1);
   };
 
-  // Обробник натискання на Email
   const handleEmailClick = (email) => {
     incrementCounter();
-    console.log(`[Callback] Відправка email на адресу: ${email}`);
+    console.log(`[Callback] Email: ${email}`);
     alert(`Надсилання листа на: ${email}`);
   };
 
-  // Обробник натискання на Дзвінок
   const handlePhoneClick = (phone) => {
     incrementCounter();
-    console.log(`[Callback] Виклик за номером: ${phone}`);
-    alert(`Здійснення виклику на номер: ${phone}`);
+    console.log(`[Callback] Телефон: ${phone}`);
+    alert(`Виклик на номер: ${phone}`);
   };
 
-  // Обробник натискання на Профіль
   const handleViewProfile = (id) => {
     incrementCounter();
     const emp = employees.find(e => e.id === id);
     console.log(`[Callback] Перегляд профілю ID ${id}:`, emp);
-    alert(`Перегляд профілю співробітника: ${emp ? emp.name : id}`);
+    alert(`Профіль співробітника: ${emp ? emp.name : id}`);
   };
 
   return (
@@ -47,13 +42,18 @@ function App() {
           {showDetails ? 'Сховати контакти' : 'Показати контакти'}
         </button>
 
-        {/* Відображення лічильника взаємодій */}
         <div className="interaction-counter">
           Взаємодій з кнопками: <span>{interactionCount}</span>
         </div>
       </header>
 
       <main className="app-main">
+        {/* Завдання 3: Панель з картками на основі children та композиції */}
+        <Dashboard />
+
+        <hr className="section-divider" />
+
+        {/* Завдання 1 та 2: Довідник співробітників */}
         <EmployeeDirectory 
           employees={employees} 
           showDetails={showDetails} 
@@ -67,3 +67,4 @@ function App() {
 }
 
 export default App;
+

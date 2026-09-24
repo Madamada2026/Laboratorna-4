@@ -44,3 +44,65 @@ export const initialEmployees = [
     isManager: false
   }
 ];
+export const initialProducts = [
+  {
+    id: 101,
+    name: "Ноутбук Pro 15",
+    category: "Електроніка",
+    price: 35000,
+    description: "Потужний ноутбук для роботи та розробки з чудовим дисплеєм.",
+    image: "https://picsum.photos/id/1/300/200",
+    inStock: true,
+    rating: 4.8
+  },
+  {
+    id: 102,
+    name: "Бездротові Навушники",
+    category: "Аудіо",
+    price: 3200,
+    description: "Чистий звук та тривала автономність до 30 годин.",
+    image: "https://picsum.photos/id/9/300/200",
+    inStock: true,
+    rating: 4.5
+  },
+  {
+    id: 103,
+    name: "Механічна Клавіатура",
+    category: "Аксесуари",
+    price: 2800,
+    description: "RGB підсвітка та надійні механічні перемикачі.",
+    image: "https://picsum.photos/id/60/300/200",
+    inStock: false,
+    rating: 4.2
+  },
+  {
+    id: 104,
+    name: "Смарт-годинник Active",
+    category: "Електроніка",
+    price: 6500,
+    description: "Моніторинг пульсу, кроків та сповіщень у реальному часі.",
+    image: "https://picsum.photos/id/26/300/200",
+    inStock: true,
+    rating: 4.7
+  },
+  {
+    id: 105,
+    name: "Портативна Колонка",
+    category: "Аудіо",
+    price: 1900,
+    description: "Захист від води IPX7 та глибокий бас.",
+    image: "https://picsum.photos/id/42/300/200",
+    inStock: true,
+    rating: 4.3
+  },
+  {
+    id: 106,
+    name: "Ергономічна Миша",
+    category: "Аксесуари",
+    price: 1200,
+    description: "Бездротова миша з регульованим DPI для тривалої роботи.",
+    image: "https://picsum.photos/id/1060/300/200",
+    inStock: false,
+    rating: 4.0
+  }
+];
